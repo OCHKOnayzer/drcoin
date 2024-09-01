@@ -3,7 +3,6 @@ import classes from './style.module.css';
 import AtrCtgr from './AtrCtgr';
 import { useAutoIncrimentValue } from '../../context/Attributes/Agility/AutoIncrimentValue';
 import { useCoins } from '../../context/CoinsContext';
-
 type ValueToUpgrate = { 
 
   coinsToupgrade: number
@@ -14,12 +13,13 @@ const Attributes = ()=> {
   const Attributes = ["Сила","Ловкость","Интеллект"];
 
   const {ValueIncriment,setValueIncriment} = useAutoIncrimentValue();
-  const {coins,setCoins} = useCoins();
-  const [sumToupgrade ,setSumToUpgrade] = useState<number>()
+  const {LvlIncrimentAgility,setLvlIncrimentAgility} = useAutoIncrimentValue()
 
-  const sumInLVLAgility = 100
-  const sumInLVLStrainght = 125
-  const sumInLVLIntilect = 325
+  const {coins,setCoins} = useCoins();
+
+  const sumInLVLAgility:number = 100
+  const sumInLVLStrainght:number = 125
+  const sumInLVLIntilect:number = 325
 
   const [Selected,setSelected] = useState<number>(0)
 
@@ -28,7 +28,13 @@ const Attributes = ()=> {
   }
   const UpgradeValuIncriment = ()=>{ 
     
-    
+    const summToUpgrade = sumInLVLAgility * LvlIncrimentAgility
+
+    if(coins >= summToUpgrade){ 
+      setCoins( prev=> prev - summToUpgrade)
+      setValueIncriment(prev=> prev +10);
+      setLvlIncrimentAgility(prev => prev + 1);
+    }
 
   }
 
@@ -42,8 +48,11 @@ const Attributes = ()=> {
 
         <AtrCtgr atrId={Selected}/>
         
-        
-
+        +1 к LvlIncrimentAgility <button onClick={UpgradeValuIncriment}>\\+\\</button>
+        {coins}
+        \
+        {ValueIncriment}
+        Для прокачки требуется{LvlIncrimentAgility*sumInLVLAgility}
     </div>
   )
 }

@@ -20,7 +20,7 @@ export const useAutoIncrimentValue = () =>{
 
 export const AutoIncrimentValueProvider = ({children}: {children: ReactNode})=>{ 
     const [ValueIncriment,setValueIncriment] = useState<number>(0);
-    const [LvlIncrimentAgility,setLvlIncrimentAgility] = useState<number>(0)
+    const [LvlIncrimentAgility,setLvlIncrimentAgility] = useState<number>(1)
     const memoValue = useMemo<AutoIncrimentValueType>(()=> (
         {
             ValueIncriment,

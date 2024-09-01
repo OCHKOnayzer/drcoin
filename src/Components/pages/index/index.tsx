@@ -7,6 +7,7 @@ import Status from '../../UI/status/Status';
 import Rooms from '../../UI/rooms/rooms';
 import ShopIndex from '../../UI/shop/ShopIndex';
 import { useCoins } from '../../context/CoinsContext';
+import { useAutoIncrimentValue } from '../../context/Attributes/Agility/AutoIncrimentValue';
 
 
 const Index = () => {
@@ -15,16 +16,16 @@ const Index = () => {
     const [flag,setFlag] = useState<boolean>(false);
     const [strength,setStrength] = useState<number>(1);
     const [GigiClick,setGigiClick] = useState<number>(0);
-
+    const {ValueIncriment,setValueIncriment} = useAutoIncrimentValue();
     
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCoins((prev) => prev + 10);
+            setCoins((prev) => prev + 10+ValueIncriment);
         }, 1000); 
 
         return () => clearInterval(interval);
-    }, [setCoins]);
+    }, [setCoins,ValueIncriment]);
 
 
     const IncrimentCoin = ()=>{ 
