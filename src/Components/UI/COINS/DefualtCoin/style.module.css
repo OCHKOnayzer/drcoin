@@ -1,0 +1,32 @@
+.coinWrapper{ 
+    height: 60%;
+    width: 40%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color:#27292c;
+    margin: 30px;
+    transition: 200ms;
+}
+.Click{ 
+    box-shadow: 0 0 10px black;
+}
+.Def{ 
+    box-shadow: 0 0 30px black;
+}
+.buttonAnimation{ 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: unset;
+    transition: 300ms;
+    opacity: 0.5;
+}
+.imageWrapper img{ 
+    pointer-events: none;
+    user-select: none;
+    height: 100%;
+    width: 100%;  
+}

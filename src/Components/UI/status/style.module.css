@@ -1,0 +1,14 @@
+.roleStyle{ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    user-select: none;
+}
+.online{ 
+    color: #ffffff70;
+}
+.trophey{ 
+    color: #F1C40F;
+}
+.moderatorka{ 
+    color: #AD1457;
+}

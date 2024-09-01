@@ -1,0 +1,23 @@
+.AtrWrapper{ 
+    max-width: 25%;
+    width: 25%;
+    height: 100%;
+    border-bottom: 1px solid #2f3133;
+    padding-left: 10px;
+}
+.AttributesNames{ 
+    display: flex;
+    height: 10%;
+    align-items: center;
+    transition: 600ms;
+}
+.selected{ 
+    border-bottom: 1px solid white;
+}
+.atr{ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 33%;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}

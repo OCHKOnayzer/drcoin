@@ -1,0 +1,52 @@
+body,html{ 
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+.IndexPageWrapper{ 
+    height: 100vh;
+    width: 100vw;
+    background-color:#36393F;
+    color: white;
+}
+.Wrapper{ 
+    display: flex;
+    justify-content: center;
+    height: 70%;
+}
+.wrapperCoins{ 
+    box-sizing: border-box;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #2f3133;
+}
+.coinsConteiner{ 
+    user-select: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 15%;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.coinsWrapper{ 
+    height: 60px;
+    margin-right: 10px;
+    position: relative;
+}
+.gigiClick{ 
+    position: absolute;
+    left: 15px;
+    bottom: 2px;
+    opacity: 0.2;
+}
+.coinsWrapper> img{ 
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+}
